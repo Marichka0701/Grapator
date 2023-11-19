@@ -56,7 +56,7 @@
         <div class="hide main_section_one_uploadURL">
             <h3 class="main_section_one_uploadURL_subtitle">Upload with URL</h3>
             <div class="main_section_one_uploadURL_inputContainer">
-                <input class="main_section_one_uploadURL_inputContainer_input" type="text" placeholder="Link to image">
+                <input id="photo_URL" class="main_section_one_uploadURL_inputContainer_input" type="text" placeholder="Link to image">
                 <div class="main_section_one_uploadURL_inputContainer_address">http://</div>
             </div>
             <p class="main_section_one_uploadURL_description">If you want to upload image from internet - you can put
@@ -65,8 +65,8 @@
         </div>
 
         <div class="main_section_one_buttons">
-            <button id="reset" class="main_section_one_buttons_button main_section_one_buttons_reset">Reset</button>
-            <button id="analyze" class="main_section_one_buttons_button main_section_one_buttons_analyze">Analyze
+            <button disabled id="reset" class="main_section_one_buttons_button main_section_one_buttons_reset">Reset</button>
+            <button disabled id="analyze" class="main_section_one_buttons_button main_section_one_buttons_analyze">Analyze
             </button>
         </div>
     </section>
@@ -78,8 +78,6 @@
         </div>
 
         <div class="main_section_two_imageContainer">
-            <img class="hideAfterAnalyze main_section_two_imageContainer_icon" src="./images/processed-image.svg"
-                 alt="processed image icon">
             <dotlottie-player id="lottiePlayer"
                               src="https://lottie.host/74840a78-fe60-43a6-8821-e54c3f9bda83/BspceRwa3U.json"
                               background="transparent" speed="1" style="width: 300px; height: 300px; display: none;"
@@ -94,10 +92,27 @@
             </div>
         </div>
 
+        <img class="hideAfterAnalyze main_section_two_imageContainer_icon" src="./images/processed-image.svg"
+             alt="processed image icon">
+
         <p class="hideAfterAnalyze main_section_two_description">
             In order to see and analyze the image, download it first at the first step and click the Analyze button
         </p>
 
+        <div style="display: none" id="processedImageFinished" class="main_section_two_processedImageFinished">
+            <p id="countGrapes" class="main_section_two_processedImageFinished_countGrapes">Found: 66 grapes</p>
+            <img id="selectedGrapesPhoto" src="./images/selected-grapes.svg" alt="grapes icon">
+            <div class="main_section_two_processedImageFinished_options">
+                <div id="open" class="main_section_two_processedImageFinished_options_item">
+                    <img src="./images/fullscreen.svg" alt="fullscreen icon">
+                    <p>Open FullScreen</p>
+                </div>
+                <div id="delete" class="main_section_two_processedImageFinished_options_item">
+                    <img src="./images/trash.svg" alt="trash icon">
+                    <p>Delete Image</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="main_section main_section_three">
@@ -144,6 +159,6 @@
 </main>
 
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-<script src="./js/uploadPhoto.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
