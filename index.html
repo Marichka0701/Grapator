@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grapator</title>
+
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+<div class="grapator_wrapper">
+
+</div>
+<header class="header">
+    <div class="header_logo">
+        <img src="./images/logo.svg" alt="logo">
+        <img src="./images/grapator.svg" alt="grapator">
+    </div>
+    <div class="header_buttons">
+        <button class="header_buttons_button header_buttons_reset">Reset All</button>
+        <button class="header_buttons_button header_buttons_print">
+            <img src="./images/print.svg" alt="print icon">
+            Print Result
+        </button>
+    </div>
+</header>
+
+<main class="main">
+    <section class="main_section main_section_one">
+        <div class="main_section_title main_section_one_title">
+            <div class="main_section_title_step">1</div>
+            <h2 class="main_section_title_name">Upload Grape Image</h2>
+        </div>
+
+        <div class="main_section_one_uploading_container">
+            <div id="upload" class="hide main_section_one_uploading_container_uploading">
+                <img class="main_section_one_uploading_container_uploading_icon" src="./images/file-upload.svg"
+                     alt="file upload icon">
+                <p class="main_section_one_uploading_container_uploading_subtitle">Drag & Drop file here or Choose
+                    file</p>
+                <input id="fileUpload" accept=".jpg, .jpeg, .png, .heic" type="file" style="display: none">
+            </div>
+            <div class="hide main_section_one_uploading_container_rules">
+                <p class="main_section_one_uploading_container_rules_item">Supported formats: JPG, PNG, JPEG, HEIC</p>
+                <p class="main_section_one_uploading_container_rules_item">Maximum size: 200MB</p>
+            </div>
+            <img class="main_section_one_uploading_container_preview" id="preview" src="" alt="Preview"
+                 style="display: none;">
+        </div>
+
+        <div class="hide main_section_one_line">
+            <span>OR</span>
+        </div>
+
+        <div class="hide main_section_one_uploadURL">
+            <h3 class="main_section_one_uploadURL_subtitle">Upload with URL</h3>
+            <div class="main_section_one_uploadURL_inputContainer">
+                <input class="main_section_one_uploadURL_inputContainer_input" type="text" placeholder="Link to image">
+                <div class="main_section_one_uploadURL_inputContainer_address">http://</div>
+            </div>
+            <p class="main_section_one_uploadURL_description">If you want to upload image from internet - you can put
+                link here, and we will upload it instead of
+                you</p>
+        </div>
+
+        <div class="main_section_one_buttons">
+            <button id="reset" class="main_section_one_buttons_button main_section_one_buttons_reset">Reset</button>
+            <button id="analyze" class="main_section_one_buttons_button main_section_one_buttons_analyze">Analyze
+            </button>
+        </div>
+    </section>
+
+    <section class="main_section main_section_two">
+        <div class="main_section_title main_section_two_title">
+            <div class="main_section_title_step">2</div>
+            <h2 class="main_section_title_name">Processsed Image</h2>
+        </div>
+
+        <div class="main_section_two_imageContainer">
+            <img class="hideAfterAnalyze main_section_two_imageContainer_icon" src="./images/processed-image.svg"
+                 alt="processed image icon">
+            <dotlottie-player id="lottiePlayer"
+                              src="https://lottie.host/74840a78-fe60-43a6-8821-e54c3f9bda83/BspceRwa3U.json"
+                              background="transparent" speed="1" style="width: 300px; height: 300px; display: none;"
+                              loop autoplay></dotlottie-player>
+
+            <div class="main_section_two_progressContainer" style="display: none;">
+                <div id="progress" style="--width: 10"></div>
+                <div id="progress_text">
+                    <p id="progress_text_label">Progress</p>
+                    <p id="progress_text_percentage"></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="hideAfterAnalyze main_section_two_description">
+            In order to see and analyze the image, download it first at the first step and click the Analyze button
+        </p>
+
+    </section>
+
+    <section class="main_section main_section_three">
+        <div class="main_section_title main_section_three_title">
+            <div class="main_section_three_title_iconContainer">
+                <img class="main_section_three_title_iconContainer_icon" src="./images/calculation.svg"
+                     alt="calculation icon">
+            </div>
+            <h2 class="main_section_title_name">Calculation</h2>
+        </div>
+
+        <div class="main_section_three_formula">
+            <h3 class="main_section_three_subtitle main_section_three_formula_subtitle">Formula:</h3>
+            <p class="main_section_three_formula_text">Number of grapes * Medium weight of a one grape</p>
+        </div>
+
+        <div class="main_section_subsection main_section_three_numberOfGrapes">
+            <h3 class="main_section_three_subtitle main_section_three_numberOfGrapes_subtitle">Number of Grapes</h3>
+            <input class="main_section_subsection_input main_section_three_numberOfGrapes_input"
+                   placeholder="Fill Number" type="text">
+        </div>
+
+        <div class="main_section_subsection main_section_three_weight">
+            <h3 class="main_section_three_subtitle main_section_three_weight_subtitle">Medium weight of a one grape</h3>
+            <input class="main_section_subsection_input main_section_three_weight_input" placeholder="3.5 g"
+                   type="text">
+            <p class="main_section_three_weight_description">Usually, the weight of grapes is from 3.5 to 5 g</p>
+        </div>
+
+        <div class="main_section_three_calculation">
+            <div class="main_section_three_calculation_titleContainer">
+                <h3 class="main_section_three_calculation_titleContainer_title">Calculation:</h3>
+                <p class="main_section_three_calculation_titleContainer_formula">NaN*3,5g = NaN</p>
+            </div>
+
+            <div class="main_section_three_calculation_divider"></div>
+
+            <div class="main_section_three_calculation_result">
+                <p class="main_section_three_calculation_result_subtitle">Approximate bunch weight:</p>
+                <p class="main_section_three_calculation_result_number">NaN</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+<script src="./js/uploadPhoto.js"></script>
+</body>
+</html>
