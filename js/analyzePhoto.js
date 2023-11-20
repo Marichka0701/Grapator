@@ -2,7 +2,6 @@
 analyzeButton.addEventListener('click', function () {
     if (preview.src) {
         fileUpload.value = null;
-        photo_URLInput.value = '';
 
         animationLoader.style.display = 'block';
         hideElementsAfterAnalyze.forEach(function (item) {
@@ -46,4 +45,6 @@ analyzeButton.addEventListener('click', function () {
             }
         }, 25);
     }
+
+    analyzeButton.disabled = true;
 });

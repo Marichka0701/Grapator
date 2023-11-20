@@ -16,10 +16,10 @@
     </div>
     <div class="header_buttons">
         <button class="header_buttons_button header_buttons_reset">Reset All</button>
-        <button class="header_buttons_button header_buttons_print">
-            <img src="./images/print.svg" alt="print icon">
-            Print Result
-        </button>
+        <!--        <button class="header_buttons_button header_buttons_print">-->
+        <!--            <img src="./images/print.svg" alt="print icon">-->
+        <!--            Print Result-->
+        <!--        </button>-->
     </div>
 </header>
 
@@ -46,24 +46,11 @@
                  style="display: none;">
         </div>
 
-        <div class="hide main_section_one_line">
-            <span>OR</span>
-        </div>
-
-        <div class="hide main_section_one_uploadURL">
-            <h3 class="main_section_one_uploadURL_subtitle">Upload with URL</h3>
-            <div class="main_section_one_uploadURL_inputContainer">
-                <input id="photo_URL" class="main_section_one_uploadURL_inputContainer_input" type="text" placeholder="Link to image">
-                <div class="main_section_one_uploadURL_inputContainer_address">http://</div>
-            </div>
-            <p class="main_section_one_uploadURL_description">If you want to upload image from internet - you can put
-                link here, and we will upload it instead of
-                you</p>
-        </div>
-
         <div class="main_section_one_buttons">
-            <button disabled id="reset" class="main_section_one_buttons_button main_section_one_buttons_reset">Reset</button>
-            <button disabled id="analyze" class="main_section_one_buttons_button main_section_one_buttons_analyze">Analyze
+            <button disabled id="reset" class="main_section_one_buttons_button main_section_one_buttons_reset">Reset
+            </button>
+            <button disabled id="analyze" class="main_section_one_buttons_button main_section_one_buttons_analyze">
+                Analyze
             </button>
         </div>
     </section>
@@ -159,7 +146,6 @@
 <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 
 <script src="js/main.js"></script>
-<script src="js/uploadPhotoFromURL.js"></script>
 <script src="js/uploadPhotoFromInput.js"></script>
 <script src="js/analyzePhoto.js"></script>
 <script src="js/resetSelectedPhoto.js"></script>

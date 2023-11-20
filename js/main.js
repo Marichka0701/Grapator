@@ -2,8 +2,6 @@ const upload = document.getElementById('upload'); // container for upload file
 const fileUpload = document.getElementById('fileUpload'); // input for upload file
 const preview = document.getElementById('preview'); // preview photo after upload
 
-const photo_URLInput = document.getElementById('photo_URL'); // input for photo URL
-
 const hideElementsAfterUploadFile = document.querySelectorAll('.hide');
 
 const resetButton = document.getElementById('reset');
@@ -28,3 +26,7 @@ const openFullScreenButton = document.getElementById('open');
 let progress = 0;
 let width = 0;
 let interval;
+
+console.log('Ширина екрану: ', window.innerWidth, 'px');
+console.log('Висота екрану: ', window.innerHeight, 'px');
+

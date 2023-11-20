@@ -5,7 +5,6 @@ resetButton.addEventListener('click', function () {
     clearInterval(interval);
 
     fileUpload.value = null;
-    photo_URLInput.value = '';
 
     preview.src = "";
     preview.style.display = 'none';
