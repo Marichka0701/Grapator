@@ -25,6 +25,7 @@ const openFullScreenButton = document.getElementById('open');
 
 let progress = 0;
 let width = 0;
+let receivedLength = 0;
 let interval;
 
 console.log('Ширина екрану: ', window.innerWidth, 'px');
